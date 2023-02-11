@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print all the nodes of the DOM</title>
+</head>
+<body>
+    <!-- This is a comment node! -->
+    <h1>This is element object</h1>
+    <h2>The childNodes Property</h2>
+    <p>Whitespace between elements are text nodes. Comments are also nodes.</p>
+    <p>The body element's child nodes are:</p>
+    <p id="demo"></p>
+    <script>
+        let collection = document.body.childNodes;
+        let output = ""
+        for(node of collection)
+        {
+           output += node.nodeName + "<br>"
+           document.getElementById("demo").innerHTML = output 
+        }
+        
+        
+    </script>
+</body>
+</html>
