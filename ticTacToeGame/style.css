@@ -1,0 +1,66 @@
+.background{
+    background-color:rgb(241, 208, 159);
+    height: 100vh;
+    padding-top: 1px;
+}
+
+.title{
+    text-align: center;
+    font-family: cursive;
+}
+
+.display{
+    text-align: center;
+    font-family: cursive;
+    font-size: 25px;
+    color: brown;
+}
+
+.display-winner{
+    display: none;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.tile{
+    border: 1px solid black;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    margin-top: 5px;
+}
+button:hover{
+    font-family: cursive;
+    color: darkred;
+}
+
+#reset {
+    background-color: #FF3860;
+}
