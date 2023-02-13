@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height Converter</title>
+    <style>
+        .main-div{
+            height: 50vh;
+            width: 60vw;
+            background-color: rgb(213, 187, 72);
+            margin-left: 18rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        header{
+            padding-top: 20px;
+        }
+        footer{
+            background-color: black;
+            margin-top: 2rem;
+            /* width: 10rem; */
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #main-inp{
+            height: 25px;
+            border-radius: 5px;
+        }
+        button{
+            color: chocolate;
+            background-color: black;
+            height: 25px;
+            border-radius: 5px;
+        }
+        footer{
+            padding-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        .res-box{
+            height: 40px;
+            width: 160px;
+            background-color: aliceblue;
+            margin: 10px;
+            text-align: center;
+        }
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main-div">
+        <header>
+            <h1>HEIGHT CONVERTER</h1>
+        </header>
+        <section>
+            <p>Enter your height in feet:</p>
+            <input type="number" placeholder="Enter value in feet" id="main-inp">
+            <button id="btn" onclick="convert()">Convert</button>
+            <div id="alert" style="color: red;"></div>
+        </section>
+        <footer>
+            <section class="sec-1">
+                <label for="cmInp" style="color: rgb(222, 170, 68);">Height in centimeters:</label>
+                <div id="cmInp" style="color: rgb(4, 4, 4); font-weight: bold;" class="res-box"></div>
+            </section>
+            <section class="sec-2">
+                <label for="inchInp" style="color: rgb(222, 170, 68);">Height in inches:</label>
+                <div id="inchInp"  style="color: rgb(2, 2, 2); font-weight: bold;" class="res-box"></div>
+            </section>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click",convert);
+        function convert(value){
+        const inp_val= parseFloat(document.getElementById("main-inp").value);
+        if(inp_val>9){
+            document.getElementById("alert").innerHTML="No such person exists in recorded history"
+        }
+        else if(inp_val <0){
+            document.getElementById("alert").innerHTML="Please enter a valid number"
+        }
+        else{
+            document.getElementById("alert").innerHTML=""
+            document.getElementById("alert").innerHTML=""
+            document.getElementById("cmInp").innerHTML = parseFloat(inp_val)*30.48;
+            document.getElementById("inchInp").innerHTML = parseFloat(inp_val)*12;
+        }
+    
+    }
+    </script>
+</body>
+
+</html>
