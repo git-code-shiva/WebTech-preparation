@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GitHub Issues</title>
+  </head>
+  <body>
+    <h1 id="page_number">Page number 1</h1>
+    <ol id="issue_list"></ol>
+    <button id="load_prev">Previous</button>
+    <button id="load_next">Next</button>
+
+    <script>
+      const issueList = document.getElementById('issue_list');
+      const pageNumber = document.getElementById('page_number');
+      let currentPage = 1;
+
+      async function fetchIssues(page){
+        const response = await fetch(`https://api.github.com/repositories/1296269/issues?page=${page}&per_page=5`);
+        const data = await response.json();
+        console.log(data);
+        return data;
+      }
+      
+      function displayIssues(issues){
+        issueList.innerHTML="";
+        for(let issue of issues){
+            const item = document.createElement('li');
+            item.textContent = issue.title;
+            issueList.appendChild(item);
+        }
+      }
+
+      async function loadPage(page){
+        const issues = await fetchIssues(page);
+        displayIssues(issues);
+        pageNumber.innerHTML = `Page number: ${page}`;
+        currentPage = page;
+      }
+      loadPage(1)
+
+      document.getElementById("load_next").addEventListener("click",async()=>{
+        if(currentPage>=1){
+            await loadPage(currentPage+1);
+        }
+      });
+
+      document.getElementById("load_prev").addEventListener("click",async()=>{
+        if(currentPage>1){
+            await loadPage(currentPage-1);
+        }
+      });
+
+
+      
+    </script>
+  </body>
+</html>
