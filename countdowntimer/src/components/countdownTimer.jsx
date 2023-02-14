@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './countDown.css'
 
 const CountDownTimer = () => {
@@ -25,8 +25,9 @@ const CountDownTimer = () => {
 
     setCurrentTime(count);
 
+    
     interval=setInterval(()=>{
-        count--;
+        count = count-1;
         setCurrentTime(count);
 
         if(count ===0){
@@ -37,6 +38,12 @@ const CountDownTimer = () => {
 
     setTimeCount("");
   }
+
+//   useEffect(()=>{
+//     return ()=>{
+//         clearInterval(interval);
+//     };
+//   },[])
 
   return (
     <>
