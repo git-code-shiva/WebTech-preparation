@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        .container{
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center;
+            justify-content: center;
+            margin-top: 5rem;
+        }
+        #timeCount {
+            width: 12rem;
+            height: 2rem;
+            border-radius: 5px;
+            font-size: large;
+        }
+        button{
+            height: 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        button:hover{
+            background-color: burlywood;
+            cursor: pointer;
+        }
+        #current-time{
+            margin-top: 2rem;
+            text-align: center;
+            font-family: cursive;
+            color: chocolate;
+            font-size: x-large;
+            
+        }
+    </style>
 </head>
+
 <body>
-    <input type="text" id="timeCount">
-    <button onclick="startTimer()">Start Timer</button>
-    <div id="current-time"></div>
+    <h1 style="text-align: center;">Countdown Timer</h1>
+    <div class="container">
+        <input type="text" id="timeCount">
+        <button onclick="startTimer()">Start Timer</button>
+    </div>
+        <div id="current-time"></div>
 
     <script src="script.js"></script>
     <!-- <script>
@@ -21,4 +61,5 @@
         })
     </script> -->
 </body>
+
 </html>

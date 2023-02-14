@@ -1,3 +1,4 @@
+const showTimer = document.getElementById("current-time");
 let interval;
 
 document.getElementById("timeCount").addEventListener("keydown",(event)=>{
@@ -7,25 +8,30 @@ document.getElementById("timeCount").addEventListener("keydown",(event)=>{
 })
 
 function startTimer() {
-    // clearInterval(interval)
+    clearInterval(interval)
 
     let timeCount = document.getElementById("timeCount").value;
     timeCount = parseInt(timeCount);
     
     if (isNaN(timeCount)) {
-      document.getElementById("current-time").innerHTML = "Invalid input";
+      showTimer.innerHTML = "0";
       return;
     }
+    if(timeCount<=0 ){
+      showTimer.innerHTML= "0"
+      document.getElementById("timeCount").value = ""
+      return
+    }
     
-    document.getElementById("current-time").innerHTML = timeCount;
+    showTimer.innerHTML = timeCount;
     
-   let interval=  setInterval(function() {
+      interval=  setInterval(()=> {
       timeCount--;
-      document.getElementById("current-time").innerHTML = timeCount;
+      showTimer.innerHTML = timeCount;
       
       if (timeCount === 0) {
         clearInterval(interval);
-        document.getElementById("current-time").innerHTML = "Countdown finished";
+        showTimer.innerHTML = "Countdown finished";
       }
     }, 1000);
     document.getElementById("timeCount").value = ""
