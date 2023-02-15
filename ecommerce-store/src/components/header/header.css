@@ -1,0 +1,12 @@
+.header{
+    height: 50px;
+    width: 70%;
+    background-color: rgb(192, 48, 192);
+    font-family: cursive;
+    font-size:25px;
+    font-weight: bold;
+    padding-top: 15px;
+    color: aliceblue;
+    border-radius: 8px;
+    padding-left: 15px;
+}

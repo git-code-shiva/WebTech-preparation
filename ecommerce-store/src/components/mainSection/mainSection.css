@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  margin-top: 40px;
+  border: 2px black solid;
+  width: 50%;
+  gap: 5px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.product-image {
+  height: 18rem;
+  width: 15rem;
+  border: 2px black solid;
+  border-radius: 9px;
+}
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  text-align: left;
+  gap: 5px;
+  margin-top: 0.5rem;
+  /* margin: auto; */
+}
+.gameName {
+  height: 3rem;
+  width: 30rem;
+  /* margin-left: 5px; */
+  background-color: blueviolet;
+  border-radius: 9px;
+  padding: auto;
+  padding-top: 10px;
+  color: beige;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.gamespan {
+  padding-left: 5px;
+}
+.gamePrice {
+  height: 2.5rem;
+  width: 100%;
+  background-color: blueviolet;
+  border-radius: 9px;
+  color: azure;
+  font-weight: 500;
+  /* text-align: center; */
+}
+
+.gameDescription {
+  height: 2.5rem;
+  width: 30em;
+  background-color: blueviolet;
+  border-radius: 9px;
+  color: azure;
+  font-weight: 500;
+}
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.details{
+  background-color: rgb(82, 136, 157);
+  width: 50%;
+  height: 10%;
+  border-radius: 8px;
+  margin-right: auto;
+  color: bisque;
+}
