@@ -4,6 +4,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainPage from './components/mainPage/mainPage';
 import Cart from './components/cart/cart';
+import Form from './components/form/form';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<MainPage/>} />
         <Route path='/cart' element={<Cart/>} />
+        <Route path='/form' element={<Form/>} />
       </Routes>
       </BrowserRouter>
      

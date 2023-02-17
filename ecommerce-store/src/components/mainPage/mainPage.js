@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../header/header";
-import MainSection from "../mainSection/mainSection";
+import PostView from "../postView/postView";
 
 const MainPage=()=>{
     return(
         <>
             <Header/>
-            <MainSection/>
+            <PostView/>
         </>
     )
 }
