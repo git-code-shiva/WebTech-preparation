@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../../card"
 import Loader from "../loader/loader";
-import PostContext from "./postContext";
+// import PostContext from "./postContext";
 
 const PostView = () => {
   const [post, setPost] = useState([]);
@@ -23,7 +23,8 @@ const PostView = () => {
   }, []);
   
   return (
-    <PostContext.Provider value={post}>
+    <>
+    {/* <PostContext.Provider value={post}> */}
     {loading ? (
       <Loader />
     ) : (
@@ -33,7 +34,8 @@ const PostView = () => {
         })}
       </div>
     )}
-  </PostContext.Provider>
+  {/* </PostContext.Provider> */}
+  </>
 );
 };
 

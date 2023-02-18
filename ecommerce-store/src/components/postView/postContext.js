@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import React from "react";
+import { createContext } from "react";
+// import React from "react";
 
-const PostContext = React.createContext([]);
+const PostContext = createContext([]);
 
 export default PostContext;

@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainPage from './components/mainPage/mainPage';
 import Cart from './components/cart/cart';
 import Form from './components/form/form';
+import Payment from './components/payment_page/payment';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<MainPage/>} />
         <Route path='/cart' element={<Cart/>} />
         <Route path='/form' element={<Form/>} />
+        <Route path='payment_page' element={<Payment/>}/>;
       </Routes>
       </BrowserRouter>
      

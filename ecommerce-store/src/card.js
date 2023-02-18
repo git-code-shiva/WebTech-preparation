@@ -2,11 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import './card.css';
 
-const MainSection = ({post}) => {
+const Card = ({post}) => {
 
   const navigate= useNavigate();
   const handleBuy=()=>{
-    navigate('/cart')
+    navigate(`/cart?name=${post.name}&price=${post.price}`);
   }
 
   return (
@@ -27,4 +27,4 @@ const MainSection = ({post}) => {
     </>
   );
 };
-export default MainSection;
+export default Card;
