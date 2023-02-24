@@ -9,7 +9,7 @@ const Beaches = () => {
                 <h3>Beach Pictures</h3>
 
                 <section className="beaches-images">
-                <Card value={"beach"}/>
+                <Card search={"beach"}/>
                     {/* <img src="https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg" alt="abc" />
                     <img src="https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg" alt="abc" />
                     <img src="https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg" alt="abc" />

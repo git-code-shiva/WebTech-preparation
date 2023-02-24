@@ -3,13 +3,14 @@ import Card from "../card";
 import "./birds.css"
 
 const Birds = () => {
+
     return (
         <>
             <section className="birds-container">
                 <h3>Bird Pictures</h3>
 
                 <section className="birds-images">
-                    <Card value={"bird"} />
+                    <Card search={"bird"} />
                 </section>
             </section>
 

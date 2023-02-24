@@ -3,9 +3,9 @@ import axios from 'axios';
 // import env from 'react-dotenv';
 
 const FLICKR_API = process.env.REACT_APP_F_API_KEY;
-// const FLICKR_API = '4d8b271f53174cb2c945329ca9d5d762';
 
-const Card = (props) => {
+
+const Card = ({search}) => {
     const [images, setImages] = useState([]);
 
     useEffect(() => {
@@ -14,7 +14,7 @@ const Card = (props) => {
                 params: {
                     method: 'flickr.photos.search',
                     api_key: FLICKR_API,
-                    text: props.value,
+                    text: search,
                     format: 'json',
                     nojsoncallback: 1,
                     per_page: 20,
@@ -25,11 +25,12 @@ const Card = (props) => {
         };
 
         fetchImages();
-    }, [props.value]);
+    }, [search]);
 
     return (
         <>
             {images.map(item => (
+                // <img key={item.id} src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}.jpg`} alt={item.title} />
                 <img key={item.id} src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}.jpg`} alt={item.title} />
             ))}
         </>

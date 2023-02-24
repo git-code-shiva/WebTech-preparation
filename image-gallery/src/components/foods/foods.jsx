@@ -9,7 +9,7 @@ const Foods = () => {
                 <h3>Food Pictures</h3>
 
                 <section className="foods-images">
-                    <Card value={"food"} />
+                    <Card search={"food"} />
                 </section>
             </section>
 

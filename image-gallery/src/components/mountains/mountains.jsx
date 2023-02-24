@@ -9,7 +9,7 @@ const Mountains = () => {
                 <h3>Mountain Pictures</h3>
 
                 <section className="mountains-images">
-                <Card value={"mountain"}/>
+                <Card search={"mountain"}/>
                 </section>
             </section>
 
