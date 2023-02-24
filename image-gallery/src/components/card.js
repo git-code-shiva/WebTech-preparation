@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import env from 'react-dotenv';
+// import env from 'react-dotenv';
 
-const FLICKR_API = process.env.REACT_APP_API_KEY;
+const FLICKR_API = process.env.REACT_APP_F_API_KEY;
 // const FLICKR_API = '4d8b271f53174cb2c945329ca9d5d762';
 
 const Card = (props) => {
