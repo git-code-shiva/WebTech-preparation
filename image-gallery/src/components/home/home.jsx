@@ -1,8 +1,8 @@
 // import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Birds from "../birds/birds";
 import Card from "../card";
-// import Card from "../card/card";
 import "./home.css";
 
 const Home = () => {
@@ -34,7 +34,24 @@ const Home = () => {
 
   const renderSearchResults = (e) => {
     if (!searchPerformed) {
-      return null;
+      return (
+        <>
+            <section className="home-btn-section">
+          <Link to="/">
+            <button>Mountain</button>
+          </Link>
+          <Link to="/beaches">
+            <button>Beaches</button>
+          </Link>
+          <Link to="/birds">
+            <button>Birds</button>
+          </Link>
+          <Link to="/foods">
+            <button>Food</button>
+          </Link>
+        </section>
+        </>
+      )
     }
     if (isLoading) {
       return <div>Loading...</div>;
@@ -69,7 +86,7 @@ const Home = () => {
           <button onClick={handleSearch}>Search</button>
         </section>
 
-        <section className="home-btn-section">
+        {/* <section className="home-btn-section">
           <Link to="/">
             <button>Mountain</button>
           </Link>
@@ -82,7 +99,7 @@ const Home = () => {
           <Link to="/foods">
             <button>Food</button>
           </Link>
-        </section>
+        </section> */}
       </section>
 
       <section>{renderSearchResults()}</section>
