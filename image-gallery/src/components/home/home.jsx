@@ -58,8 +58,10 @@ const Home = () => {
     }
     return(
         <>
-            <div>Search Results for "{debouncedSearchTerm}"</div>
+            <div style={{margin:"0px 0px 0px 25px"}}>Search Results for "{debouncedSearchTerm}"</div>
+        <section className="search_result">
             <Card search={debouncedSearchTerm}/>
+        </section>
         </>
     )
   };
